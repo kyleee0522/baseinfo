@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /baseinfo
+    
+spring:
+  application:
+    name: baseinfo
+
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://211.43.12.162:31381/edu
+    username: root
+    password: New1234!
+    
+    
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true      
